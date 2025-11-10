@@ -1,0 +1,10 @@
+.text-img {
+    font-size: 100px;
+    font-weight: 800;
+    background-image: url("https://cdn.shopify.com/s/files/1/0815/9192/7062/files/download.png?v=1720580915");
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transporent;
+}

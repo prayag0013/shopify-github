@@ -3323,3 +3323,7 @@ details-disclosure > details {
     --sparkle: url('./sparkle.gif');
   }
 }
+
+.utility-bar--bottom-border {
+    background: burlywood;
+}

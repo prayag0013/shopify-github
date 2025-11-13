@@ -3326,4 +3326,6 @@ details-disclosure > details {
 
 .utility-bar--bottom-border {
     background: burlywood;
+}.utility-bar--bottom-border {
+    color: red;
 }

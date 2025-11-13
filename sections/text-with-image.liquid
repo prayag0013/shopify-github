@@ -1,0 +1,86 @@
+<h2 class="{{ section.settings.heading_size}}" style="color:{{ section.settings.heading_color}}">{{ section.settings.heading_text }}</h2>
+
+<div class="grid-layout"> 
+          {%- for block in section.blocks -%}
+          {%- if block.settings.logo != blank -%}
+              <div class="log-holder">
+                 <div class="img-holder">
+                               {{- block.settings.logo | image_url: width: block.settings.logo.width | image_tag: loading: 'lazy', widths: widths, class: 'logo-list__image'}}
+              
+                 </div>
+<h4>{{ block.settings.img_title }}</h4>
+              </div>
+   
+  {%- endif -%}
+  
+{%- endfor -%}
+</div>
+
+
+{% schema %}
+  {
+    "name": "Custom Section",
+    "settings": [
+  {
+    "type": "text",
+    "id":"heading_text",
+    "label":"Title Description"
+
+  }, 
+      {
+    "type": "select",
+    "id":"heading_size",
+    "label":"Heading Size",
+    "options": [
+        {
+          "value": "h1",
+          "label": "Large"
+          
+        },
+        {
+          "value": "h3",
+          "label": "Small"
+        }
+        
+      ]
+  },
+        {
+    "type": "color",
+    "id":"heading_color",
+    "label":"Title Color"
+
+  }
+    ],
+      "blocks": [
+    {
+      "type": "logo-image",
+      "name": "image-list",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Logo",
+          "info": "300 x 90px .jpg recommended"
+        },
+           {
+          "type": "text",
+          "id": "img_title",
+          "label": "Image title"
+         
+        }
+      ]
+    }
+  ],
+    "presets": [
+    {
+      "name": "Custom Section"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
